@@ -1,0 +1,92 @@
+/* Remove default browser spacing */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Header sits above all three sections */
+header {
+    width: 100%;
+    padding: 20px;
+    background-color: #0267cd;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+/* Three equal-width columns */
+.sections {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 20px;
+    min-height: calc(100vh - 80px);
+}
+
+/* Individual sections */
+.section {
+    flex: 1;
+    min-width: 0;
+    min-height: 300px;
+    padding: 35px;
+    background-color: #3cabff;
+    border-radius: 8px;
+    min-height: 300px;
+    font-size: large;
+}
+
+.first-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.subsection {
+    flex: 1;
+    padding: 0px;
+    background-color: #3cabff;
+    border-radius: 8px;
+}
+
+ul{
+    margin: 0;
+    padding: 10;
+    list-style: none;
+}
+
+li {
+    padding-bottom: 20px; /* Space for the custom marker */
+}
+
+
+hr{
+    border: none;
+    border-top: 1px solid black;
+}
+
+h2 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+p{
+    margin-bottom: 10;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Stack sections on smaller screens */
+@media (max-width: 600px) {
+    .sections {
+        grid-template-columns: 1fr;
+    }
+}
